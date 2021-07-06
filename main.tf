@@ -36,7 +36,7 @@ resource "vsphere_virtual_machine" "centos-vm" {
   datastore_id     = data.vsphere_datastore.datastore.id
   resource_pool_id = data.vsphere_compute_cluster.compute_cluster.resource_pool_id
 
-  num_cpus                  = var.linux_hw_params["cpu"]
+  num_cpus                  = 5
   memory                    = var.linux_hw_params["ram"]
   wait_for_guest_ip_timeout = 10
   guest_id                  = "centos8_64Guest"
